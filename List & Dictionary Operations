@@ -1,0 +1,41 @@
+# List & Dictionary Operations
+
+# Merge two lists
+def merge_lists(list1, list2):
+    return list1 + list2
+
+# Filter even numbers from a list
+def filter_even(numbers):
+    return list(filter(lambda x: x % 2 == 0, numbers))
+
+# Square all elements in a list
+def square_list(numbers):
+    return list(map(lambda x: x**2, numbers))
+
+# Merge two dictionaries
+def merge_dicts(dict1, dict2):
+    return {**dict1, **dict2}
+
+# Filter dictionary values greater than 50
+def filter_dict_values(d):
+    return {k: v for k, v in d.items() if v > 50}
+
+# Multiply all dictionary values by 10
+def transform_dict_values(d):
+    return {k: v * 10 for k, v in d.items()}
+
+# Sample demonstration
+if __name__ == "__main__":
+    list1 = [1, 2, 3, 4]
+    list2 = [5, 6, 7, 8]
+    merged = merge_lists(list1, list2)
+    print("Merged List:", merged)
+    print("Even Numbers:", filter_even(merged))
+    print("Squared List:", square_list(merged))
+
+    dict1 = {'a': 10, 'b': 60}
+    dict2 = {'c': 30, 'd': 90}
+    merged_dict = merge_dicts(dict1, dict2)
+    print("Merged Dict:", merged_dict)
+    print("Filtered Dict (>50):", filter_dict_values(merged_dict))
+    print("Transformed Dict (*10):", transform_dict_values(merged_dict))
